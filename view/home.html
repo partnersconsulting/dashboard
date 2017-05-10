@@ -1,0 +1,175 @@
+<div class="row">
+    <panel title="DADOS CRÉDITO" icon="fa-usd" height="50" col="4" size="sm" panelclass="panel-danger">
+        <dl class="dl-flex">
+            <dt>Data Última Fatura</dt>
+            <dd></dd>
+            <dt>Status Bloqueio Crédito</dt>
+            <dd></dd>
+        </dl>
+        <table class="table table-hover table-info">
+            <thead>
+                <tr>
+                    <th>$</th>
+                    <th>Limite Crédito</th>
+                    <th>Utilizado</th>
+                    <th>Disponível</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>VC</td>
+                    <td contenteditable="true">12</td>
+                    <td contenteditable="true">8</td>
+                    <td contenteditable="true">2</td>
+                </tr>
+                <tr>
+                    <td>VCMAIS</td>
+                    <td contenteditable="true">5</td>
+                    <td contenteditable="true">3</td>
+                    <td contenteditable="true">1</td>
+                </tr>
+            </tbody>
+        </table>
+        <dl class="dl-flex">
+            <dt>Número Último Registro</dt>
+            <dd></dd>
+            <dt>Número Pedido em Tela</dt>
+            <dd></dd>
+            <dt>Categoria 2</dt>
+            <dd></dd>
+            <dt>Status Faturamento</dt>
+            <dd></dd>
+            <dt>Data Último Registro</dt>
+            <dd></dd>
+            <dt>Data Faturamento</dt>
+            <dd></dd>
+        </dl>
+        <!-- <div class="col-md-6">
+                <dl class="dl-flex">
+                    <dt>Razão</dt>
+                    <dd class="ng-binding">{{selectedClient.razao}}</dd>
+                    <dt>Contato</dt>
+                    <dd class="ng-binding">{{selectedClient.contatos[0].nome}}</dd>
+                    <dt>Email</dt>
+                    <dd class="ng-binding">{{selectedClient.contatos[0].emails[0].email}}</dd>
+                    <dt>UF</dt>
+                    <dd class="ng-binding">{{selectedClient.uf}}</dd>
+                    <dt>Nome</dt>
+                    <dd class="ng-binding">{{selectedClient.contatos[0].agrupador.nome}}</dd>
+                    <dt>Telefone</dt>
+                    <dd class="ng-binding">{{selectedClient.contatos[0].telefones[0].numero}}</dd>
+                    <dt>Email</dt>
+                    <dd class="ng-binding">{{selectedClient.contatos[0].emails[0].email}}</dd>
+                </dl>
+            </div>
+        </div> -->
+    </panel>
+    <panel title="ÚLTIMAS INTERAÇÕES" icon="fa-exchange" height="50" col="4" size="sm">
+        <div class="input-group input-group-md">
+            <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
+                                                                          aria-hidden="true"></i></span>
+            <input type="text" class="form-control" placeholder="busca interações" aria-describedby="sizing-addon1" ng-model="filtro2">
+        </div>
+        <br/>
+        <table class="table table-hover">
+            <!-- <caption>Monthly Kills</caption> -->
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th><i class="fa fa-calendar" aria-hidden="true"></i> DATA</th>
+                    <th><i class="fa fa-clock-o" aria-hidden="true"></i> HORA</th>
+                    <th>TIPO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="interacao in interacoes | filter:filtro2">
+                    <!-- <td contenteditable="true">12</td> -->
+                    <td>{{interacao.id}}</td>
+                    <td><i class="fa fa-calendar" aria-hidden="true"></i> {{interacao.data}}</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> {{interacao.hora}}</td>
+                    <td>
+                        <i class="fa icon-status" ng-class="{'fa-phone call-in': interacao.tipoId==1,'fa-phone call-out': interacao.tipoId==2,'fa-envelope email': interacao.tipoId==3}" aria-hidden="true"></i> {{interacao.tipo}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </panel>
+    <panel title="ÚLTIMAS PESQUISAS" icon="fa-search" height="50" col="4" size="sm" panelclass="panel-success">
+        <div class="input-group input-group-md">
+            <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
+                                                                          aria-hidden="true"></i></span>
+            <input type="text" class="form-control" placeholder="busca pesquisas" aria-describedby="sizing-addon1" ng-model="filtro3">
+        </div>
+        <br/>
+        <table class="table table-hover">
+            <!-- <caption>Monthly Kills</caption> -->
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Código cliente</th>
+                    <th>Data Pesquisa</th>
+                    <th><i class="fa fa-user" aria-hidden="true"></i> Realizada por</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pesquisa in pesquisas | filter:filtro3">
+                    <!-- <td contenteditable="true">12</td> -->
+                    <td>{{pesquisa.id}}</td>
+                    <td>{{pesquisa.codCliente}}</td>
+                    <td>{{pesquisa.data}}</td>
+                    <td> <i class="fa fa-user icon-status " aria-hidden="true"></i> {{pesquisa.realizadaPor}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </panel>
+</div>
+<div class="row">
+    <panel title="ÚLTIMAS COTAÇÕES/ PEDIDOS" icon="fa-file-text-o" height="50" col="4" panelclass="panel-info" size="sm">
+        <div class="input-group input-group-md">
+            <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
+                                                                          aria-hidden="true"></i></span>
+            <input type="text" class="form-control" placeholder="busca processos" aria-describedby="sizing-addon1" ng-model="filtro2">
+        </div>
+        <table class="table table-hover">
+            <!-- <caption>Monthly Kills</caption> -->
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Data/hora</th>
+                    <th>Cliente</th>
+                    <th>Processo</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="processo in processos | filter:filtro2">
+                    <!-- <td contenteditable="true">12</td> -->
+                    <td>{{processo.id}}</td>
+                    <td>{{processo.data}}</td>
+                    <td>{{processo.cliente}}</td>
+                    <td>{{processo.processo}}</td>
+                    <td>{{processo.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </panel>
+    <panel title="FATURAMENTO POR TONELADA" icon="fa-truck" height="50" col="4" size="sm" panelclass="panel-warning">
+        <c3chart bindto-id="donut-plot1-chart">
+            <chart-column column-id="Data 1" column-values="70" column-type="donut" />
+            <chart-column column-id="Data 2" column-values="35" column-type="donut" />
+            <chart-column column-id="Data 3" column-values="60" column-type="donut" />
+            <chart-donut title="Donut" width="60" />
+        </c3chart>
+    </panel>
+    <panel title="FATURAMENTO POR QUANTIDADE" icon="fa-hashtag" height="50" col="4" panelclass="panel-warning" size="sm">
+        <c3chart bindto-id="stacked-bar-plot1-chart" chart-data="dadosGraficos" chart-columns="dadosGraficosColunas" chart-x="datax">
+            <chart-size chart-height="220" />
+            <chart-axes values-x="x" />
+            <chart-axis>
+                <chart-axis-x axis-position="outer-center" axis-label="Dados Mercado" axis-type="category" />
+            </chart-axis>
+            <chart-bar ratio="0.8" />
+            <chart-group group-values="data 1,data 2" />
+        </c3chart>
+    </panel>
+</div>
