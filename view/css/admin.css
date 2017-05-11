@@ -13,6 +13,7 @@
 html {
     background: #777;
     font-family: 'Ubuntu', sans-serif;
+    font-size: .6em;
 }
 
 body {
@@ -268,7 +269,7 @@ p {
 /**/
 
 .dl-flex {
-    font-size: 12px;
+    font-size: 9px;
     line-height: 25px;
     display: flex;
     flex-wrap: wrap;
