@@ -27,7 +27,7 @@ angular.module('App.directives', [])
         }
 
         ddo.link = function($scope, element, attrs) {
-            element.addClass("col-panel col-sm-" + $scope.col + "col-xs-" + $scope.col);  
+            element.addClass("col-panel col-sm-" + $scope.col + " col-xs-" + $scope.col);  
         }
 
         ddo.transclude = true;
