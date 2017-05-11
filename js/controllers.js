@@ -1,5 +1,5 @@
 angular.module("App.controllers", [])
-    .controller("HomeController", function($scope, $rootScope, $location)
+    .controller("HomeController", function($scope, $rootScope, $location, $uibModal)
     {
 
         $scope.items = [
@@ -72,12 +72,38 @@ angular.module("App.controllers", [])
 
 
 
-
+        
+        $rootScope.open('md', '', 'view/modal/pedido.html', '');
     })
-
+.controller("ModalInstanceCtrl", function($scope, $rootScope, $filter, $uibModal, $document, $location)
+{
+})
 .controller("MainController", function($scope, $rootScope, $filter, $uibModal, $document, $location)
 {
+    
+    $rootScope.open = function (size, parentSelector, page, tipo) {
 
+            var r = '?n=' + Math.random();
+
+            var parentElem = parentSelector ?
+                angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
+            var modalInstance = $uibModal.open({
+                animation: true,
+                ariaLabelledBy: 'modal-title',
+                ariaDescribedBy: 'modal-body',
+                templateUrl: page + r,
+                controller: 'ModalInstanceCtrl',
+                controllerAs: '$ctrl',
+                size: size,
+                appendTo: parentElem,
+                resolve: {
+                    items: function () {
+                        return [];
+                    }
+                }
+            });
+
+        };
 
     $rootScope.pesquisas = [
         {
