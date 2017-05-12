@@ -110,54 +110,22 @@ angular.module("App.controllers", [])
 
         };
 
+
     $rootScope.pesquisas = [
         {
-            id: 1,
-            codCliente: "654222261",
-            data: "01.04.2017",
-            realizadaPor: "Guilherme"
+            id: 652323,
+            data: "01.04.2017 - 08:22",
+            resumo: "O cliente não efetuou compras nos últimos 3 meses, porém agora demonstra interesse de produtos para obras especiais."
         },
         {
-            id: 2,
-            codCliente: "867867888",
-            data: "02.04.2017",
-            realizadaPor: "Gabriela"
+            id: 652434,
+            data: "02.04.2017 - 10:52",
+            resumo: "Sem dados"
         },
         {
-            id: 3,
-            codCliente: "678678888",
-            data: "03.04.2017",
-            realizadaPor: "Gustavo"
-        },
-        {
-            id: 4,
-            codCliente: "645633333",
-            data: "04.04.2017",
-            realizadaPor: "Isadora"
-        },
-        {
-            id: 5,
-            codCliente: "876876888",
-            data: "05.04.2017",
-            realizadaPor: "Ana Clara"
-        },
-        {
-            id: 6,
-            codCliente: "323232434",
-            data: "06.04.2017",
-            realizadaPor: "Mariana"
-        },
-        {
-            id: 7,
-            codCliente: "5435453",
-            data: "07.04.2017",
-            realizadaPor: "Felipe"
-        },
-        {
-            id: 8,
-            codCliente: "545435543",
-            data: "08.04.2017",
-            realizadaPor: "Maria Clara"
+            id: 652434,
+            data: "03.04.2017 - 11:11",
+            resumo: "Sem dados"
         }
 
     ];
@@ -166,103 +134,58 @@ angular.module("App.controllers", [])
 
     $rootScope.interacoes = [
     {
-        id: 1,
-        data: "01.04.2017",
-        hora: "08:22",
+        id: 6478,
+        data: "01.04.2017 - 08:22",
+        status: "Aberto",
         tipoId: "1",
-        tipo: "LIGACAO IN"
+        tipo: "LIGACAO IN",
+        resumo: "Informações de crédito para novas compras."
     },
     {
-        id: 2,
-        data: "02.04.2017",
-        hora: "10:52",
+        id: 6455,
+        data: "02.04.2017 - 10:52",
+        status: "Fechado",
         tipoId: "2",
-        tipo: "LIGACAO OUT"
+        tipo: "LIGACAO OUT",
+        resumo: "Cliente solicitou informação sobre produto Votomassa."
     },
     {
-        id: 3,
-        data: "05.04.2017",
-        hora: "11:11",
+        id: 6155,
+        data: "05.04.2017 - 11:11",
+        status: "Aberto",
         tipoId: "1",
-        tipo: "LIGACAO IN"
+        tipo: "LIGACAO IN",
+        resumo: "Contato do cliente via Chat solicitando visita de vendedor externo."
     },
     {
-        id: 4,
-        data: "10.04.2017",
-        hora: "13:20",
+        id: 6331,
+        data: "10.04.2017 - 13:20",
+        status: "Fechado",
         tipoId: "2",
-        tipo: "LIGACAO OUT"
-    },
-    {
-        id: 5,
-        data: "20.04.2017",
-        hora: "13:50",
-        tipoId: "2",
-        tipo: "LIGACAO OUT"
-    },
-    {
-        id: 6,
-        data: "22.04.2017",
-        hora: "15:30",
-        tipoId: "3",
-        tipo: "E-MAIL"
-    },
-    {
-        id: 7,
-        data: "22.04.2017",
-        hora: "16:00",
-        tipoId: "3",
-        tipo: "E-MAIL"
-    },
-    {
-        id: 8,
-        data: "25.04.2017",
-        hora: "20:22",
-        tipoId: "1",
-        tipo: "LIGACAO IN"
+        tipo: "LIGACAO OUT",
+        resumo: "Informações de crédito para novas compras."
     }];
 
-    $rootScope.linksMenu = [
+
+
+$rootScope.pedidos = [
     {
-        nome: 'Home',
-        link: '/home',
-        icon: 'fa-home'
+        id: 900006478,
+        data: "01.04.2017 - 08:22",
+        status: "REALIZADO",
+        resumo: "VOTOMASSA / VOTORAN OBRAS ESPECIAIS"
     },
     {
-        nome: 'Cliente',
-        link: '/cliente',
-        icon: 'fa-user'
-
+        id: 900006455,
+        data: "02.04.2017 - 10:52",
+        status: "FATURADO",
+        resumo: "VOTORAN OBRAS ESPECIAIS / CAL HIDRATADA / VOTORAN OBRAS ESTRUTURAIS"
     },
     {
-        nome: 'Tela3',
-        link: '/tela3',
-        icon: 'fa-bar-chart'
-
-    },
-    {
-        nome: 'Simulações',
-        link: '/simulacoes',
-        icon: 'fa-usd'
-
-    },
-    {
-        nome: 'Termometro',
-        link: '/termometro',
-        icon: 'fa-thermometer-half'
-
-    },
-    {
-        nome: 'Clientes',
-        link: '/clientes',
-        icon: 'fa-users'
-
+        id: 900006155,
+        data: "05.04.2017 - 11:11",
+        status: "ENTREGUE",
+        resumo: "VOTORAN OBRAS ESPECIAIS / CAL HIDRATADA / VOTORAN OBRAS ESTRUTURAIS"
     }];
 
-    $rootScope.$on('$routeChangeSuccess', function(e, current, pre)
-    {
-        $rootScope.currentRoute = $location.path();
-    });
-
-    $rootScope.currentRoute = "/home";
 });

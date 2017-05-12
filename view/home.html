@@ -71,27 +71,32 @@
             <input type="text" class="form-control" placeholder="busca interações" aria-describedby="sizing-addon1" ng-model="filtro2">
         </div>
         <br/> -->
+
+
+
+
+
+
         <table class="table table-hover">
             <!-- <caption>Monthly Kills</caption> -->
             <thead>
                 <tr>
                     <th>#</th>
-                    <th><i class="fa fa-calendar" aria-hidden="true"></i> DATA</th>
-                    <th><i class="fa fa-clock-o" aria-hidden="true"></i> HORA</th>
-                    <th>TIPO</th>
-                    <th>RESUMO</th>
+                    <th>DATA/HORA</th>
+                    <th>STATUS</th>
+                    <th class="width-max-50">RESUMO</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="interacao in interacoes | filter:filtro2">
                     <!-- <td contenteditable="true">12</td> -->
                     <td>{{interacao.id}}</td>
-                    <td><i class="fa fa-calendar" aria-hidden="true"></i> {{interacao.data}}</td>
-                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> {{interacao.hora}}</td>
-                    <td>
+                    <td>{{interacao.data}}</td>
+                    <td>{{interacao.status}}</td>
+                    <td class="width-max-50">{{interacao.resumo}}</td>
+                <!--     <td>
                         <i class="fa icon-status" ng-class="{'fa-phone call-in': interacao.tipoId==1,'fa-phone call-out': interacao.tipoId==2,'fa-envelope email': interacao.tipoId==3}" aria-hidden="true"></i> {{interacao.tipo}}
-                    </td>
-                    <td>Cliente falou algo e em relação ao pedido</td>
+                    </td> -->
                 </tr>
             </tbody>
         </table>
@@ -103,23 +108,22 @@
             <input type="text" class="form-control" placeholder="busca pesquisas" aria-describedby="sizing-addon1" ng-model="filtro3">
         </div>
         <br/> -->
+
         <table class="table table-hover">
             <!-- <caption>Monthly Kills</caption> -->
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Código</th>
                     <th>Data</th>
-                    <th><i class="fa fa-user icon-status" aria-hidden="true"></i> Usuário</th>
+                    <th>Resumo</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="pesquisa in pesquisas | filter:filtro3">
                     <!-- <td contenteditable="true">12</td> -->
                     <td>{{pesquisa.id}}</td>
-                    <td>{{pesquisa.codCliente}}</td>
                     <td>{{pesquisa.data}}</td>
-                    <td> <i class="fa fa-user icon-status " aria-hidden="true"></i> {{pesquisa.realizadaPor}}</td>
+                    <td>{{pesquisa.resumo}}</td>
                 </tr>
             </tbody>
         </table>
@@ -130,7 +134,7 @@
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
-            <input type="text" class="form-control" placeholder="busca processos" aria-describedby="sizing-addon1" ng-model="filtro2">
+            <input type="text" class="form-control" placeholder="busca processos" aria-describedby="sizing-addon1" ng-model="filtro1">
         </div>
         <table class="table table-hover">
             <!-- <caption>Monthly Kills</caption> -->
@@ -138,19 +142,21 @@
                 <tr>
                     <th>#</th>
                     <th>Data/hora</th>
-                    <th>Cliente</th>
-                    <th>Processo</th>
                     <th>Status</th>
+                    <th class="width-max-50">ITENS</th>
                 </tr>
             </thead>
+
+
+
+
             <tbody>
-                <tr ng-repeat="processo in processos | filter:filtro2">
+                <tr ng-repeat="pedido in pedidos | filter:filtro1">
                     <!-- <td contenteditable="true">12</td> -->
-                    <td>{{processo.id}}</td>
-                    <td>{{processo.data}}</td>
-                    <td>{{processo.cliente}}</td>
-                    <td>{{processo.processo}}</td>
-                    <td>{{processo.status}}</td>
+                    <td>{{pedido.id}}</td>
+                    <td>{{pedido.data}}</td>
+                    <td>{{pedido.status}}</td>
+                    <td class="width-max-50">{{pedido.resumo}}</td>
                 </tr>
             </tbody>
         </table>
