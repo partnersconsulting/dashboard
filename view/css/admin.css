@@ -189,9 +189,10 @@ p {
 }
 
 .panel-project .panel-mini {
-    padding: 1px 15px 0 10px;
+    padding: 1px 2px 0 2px;
     min-height: 30px;
     line-height: 30px;
+    font-size: 84%;
 }
 
 .panel-project .panel-mini .fa-stack {
