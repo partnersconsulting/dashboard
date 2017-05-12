@@ -1,11 +1,31 @@
 <div class="row">
     <panel title="DADOS CRÉDITO" icon="fa-usd" height="50" col="4" size="sm" panelclass="panel-danger">
-        <dl class="dl-flex">
-            <dt>Data Última Fatura</dt>
-            <dd>22.05.2017</dd>
-            <dt>Status Bloqueio Crédito</dt>
-            <dd></dd>
-        </dl>
+        <div class="row">
+            <div class="col-xs-6">
+                <dl class="dl-flex">
+                    <dt>Última Fatura</dt>
+                    <dd>22.05.2017</dd>
+                    <dt>Status Fatura</dt>
+                    <dd>REALIZADO</dd>
+                    <dt>ULT. REG.</dt>
+                    <dd>23423</dd>
+                    <dt>PEDIDO TELA</dt>
+                    <dd>122354</dd>
+                </dl>
+            </div>
+            <div class="col-xs-6">
+                <dl class="dl-flex">
+                    <dt>Status Crédito</dt>
+                    <dd>LIBERADO</dd>
+                    <dt>Categoria</dt>
+                    <dd>none</dd>
+                    <dt>DATA REG.</dt>
+                    <dd>10/05/2017</dd>
+                    <dt>DATA FAT</dt>
+                    <dd>20/05</dd>
+                </dl>
+            </div>
+        </div>
         <table class="table table-hover table-info">
             <thead>
                 <tr>
@@ -30,20 +50,6 @@
                 </tr>
             </tbody>
         </table>
-        <dl class="dl-flex">
-            <dt>Número Último Registro</dt>
-            <dd></dd>
-            <dt>Número Pedido em Tela</dt>
-            <dd></dd>
-            <dt>Categoria 2</dt>
-            <dd></dd>
-            <dt>Status Faturamento</dt>
-            <dd></dd>
-            <dt>Data Último Registro</dt>
-            <dd></dd>
-            <dt>Data Faturamento</dt>
-            <dd></dd>
-        </dl>
         <!-- <div class="col-md-6">
                 <dl class="dl-flex">
                     <dt>Razão</dt>
@@ -65,18 +71,12 @@
         </div> -->
     </panel>
     <panel title="ÚLTIMAS INTERAÇÕES" icon="fa-exchange" height="50" col="5" size="sm">
-<!--         <div class="input-group input-group-sm">
+        <!--         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
             <input type="text" class="form-control" placeholder="busca interações" aria-describedby="sizing-addon1" ng-model="filtro2">
         </div>
         <br/> -->
-
-
-
-
-
-
         <table class="table table-hover">
             <!-- <caption>Monthly Kills</caption> -->
             <thead>
@@ -94,7 +94,7 @@
                     <td>{{interacao.data}}</td>
                     <td>{{interacao.status}}</td>
                     <td class="width-max-50">{{interacao.resumo}}</td>
-                <!--     <td>
+                    <!--     <td>
                         <i class="fa icon-status" ng-class="{'fa-phone call-in': interacao.tipoId==1,'fa-phone call-out': interacao.tipoId==2,'fa-envelope email': interacao.tipoId==3}" aria-hidden="true"></i> {{interacao.tipo}}
                     </td> -->
                 </tr>
@@ -102,13 +102,12 @@
         </table>
     </panel>
     <panel title="ÚLTIMAS PESQUISAS" icon="fa-search" height="50" col="3" size="sm" panelclass="panel-success">
-<!--         <div class="input-group input-group-sm">
+        <!--         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
             <input type="text" class="form-control" placeholder="busca pesquisas" aria-describedby="sizing-addon1" ng-model="filtro3">
         </div>
         <br/> -->
-
         <table class="table table-hover">
             <!-- <caption>Monthly Kills</caption> -->
             <thead>
@@ -146,10 +145,6 @@
                     <th class="width-max-50">ITENS</th>
                 </tr>
             </thead>
-
-
-
-
             <tbody>
                 <tr ng-repeat="pedido in pedidos | filter:filtro1">
                     <!-- <td contenteditable="true">12</td> -->
@@ -163,7 +158,7 @@
     </panel>
     <panel title="FATURAMENTO POR TONELADA" icon="fa-truck" height="50" col="3" size="sm" panelclass="panel-warning">
         <c3chart bindto-id="donut-plot1-chart">
-             <chart-size chart-height="160" />
+            <chart-size chart-height="160" />
             <chart-column column-id="Data 1" column-values="70" column-type="donut" />
             <chart-column column-id="Data 2" column-values="35" column-type="donut" />
             <chart-column column-id="Data 3" column-values="60" column-type="donut" />
