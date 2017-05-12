@@ -1,11 +1,8 @@
 <div class="row">
     <panel title="DADOS CRÉDITO" icon="fa-usd" height="50" col="4" size="sm" panelclass="panel-danger">
-            <panel-actions>
-            <button type="button" class="btn btn-default btn-xs"  ng-click="expad()"><i class="fa fa-expand" aria-hidden="true"></i></button>
+        <panel-actions>
+            <a class="btn btn-xs btn-warning btn-min-alert" href="#" role="button" ng-click="openPop()"><i class="fa fa-bell" aria-hidden="true"> alertas</i></a>
         </panel-actions>
-
-
-
         <div class="row">
             <div class="col-xs-6">
                 <dl class="dl-flex">
@@ -210,7 +207,4 @@
             <chart-bar ratio="0.8" />
         </c3chart>
     </panel>
-</div>
-<div class="row">
-    <a class="btn btn-xs btn-warning" href="#" role="button" ng-click="openPop()">alertas</a>
 </div>

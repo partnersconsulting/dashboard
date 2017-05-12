@@ -196,6 +196,33 @@ angular.module("App.controllers", [])
 
 
 
+        $rootScope.skus = [
+            {
+                id: "SGG-76567576"
+            },
+            {
+                id: "SGG-24434"
+            }
+            ,
+            {
+                id: "CIG-4343"
+            }
+            ,
+            {
+                id: "CIG-2223"
+            }
+            ,
+            {
+                id: "CIM-43243"
+            }
+            ,
+            {
+                id: "CIM-312321"
+            }
+            
+
+        ]
+
         $rootScope.faturaTon = [
             {
                 produto: "Cimentos",

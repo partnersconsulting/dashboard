@@ -11,28 +11,26 @@
                 <dd>R$ 22.000,00</dd>
                 <dt><i class="fa fa-shopping-bag" aria-hidden="true"></i> Frequência comra:</dt>
                 <dd>22 dias</dd>
+                <dt><i class="fa fa-calendar" aria-hidden="true"></i> Último Contato:</dt>
+                <dd>22.04.17 - 18:22</dd>
             </dl>
         </div>
         <div class="col-xs-6">
             <dl class="dl-flex-block">
-                <dt><i class="fa fa-calendar" aria-hidden="true"></i> Último Contato:</dt>
-                <dd>22.04.17 - 18:22</dd>
-                <dt><i class="fa fa-dropbox" aria-hidden="true"></i> Produtos mais comprados:</dt>
+                <dt><i class="fa fa-dropbox" aria-hidden="true"></i> Skus mais comprados:</dt>
             </dl>
+
+            
             <table class="table table-hover">
                 <!-- <caption>Monthly Kills</caption> -->
                 <thead>
                     <tr>
-                        <th># Pedido</th>
-                        <th>DATA/HORA</th>
                         <th>SKU</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="interacao in interacoes | filter:filtro2">
-                        <td>{{interacao.id}}</td>
-                        <td>{{interacao.data}}</td>
-                        <td>GUP-876876</td>
+                    <tr ng-repeat="sku in skus | filter:filtro2">
+                        <td>{{sku.id}}</td>
                     </tr>
                 </tbody>
             </table>
