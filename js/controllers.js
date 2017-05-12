@@ -191,23 +191,22 @@ angular.module("App.controllers", [])
         }];
 
 
-
         $rootScope.pedidos = [
         {
-            id: 900006478,
-            data: "01.04.2017 - 08:22",
+            id: 9000000270,
+            data: "11.05.17 15:13",
             status: "REALIZADO",
             resumo: "VOTOMASSA / VOTORAN OBRAS ESPECIAIS"
         },
         {
-            id: 900006455,
-            data: "02.04.2017 - 10:52",
+            id: 9000000227,
+            data: "18.04.17 12:44",
             status: "FATURADO",
             resumo: "VOTORAN OBRAS ESPECIAIS / CAL HIDRATADA / VOTORAN OBRAS ESTRUTURAIS"
         },
         {
-            id: 900006155,
-            data: "05.04.2017 - 11:11",
+            id: 9000000214,
+            data: "18.04.17 17:55",
             status: "ENTREGUE",
             resumo: "VOTORAN OBRAS ESPECIAIS / CAL HIDRATADA / VOTORAN OBRAS ESTRUTURAIS"
         }];
