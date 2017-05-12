@@ -65,12 +65,12 @@
         </div> -->
     </panel>
     <panel title="ÚLTIMAS INTERAÇÕES" icon="fa-exchange" height="50" col="4" size="sm">
-        <div class="input-group input-group-sm">
+<!--         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
             <input type="text" class="form-control" placeholder="busca interações" aria-describedby="sizing-addon1" ng-model="filtro2">
         </div>
-        <br/>
+        <br/> -->
         <table class="table table-hover">
             <!-- <caption>Monthly Kills</caption> -->
             <thead>
@@ -79,6 +79,7 @@
                     <th><i class="fa fa-calendar" aria-hidden="true"></i> DATA</th>
                     <th><i class="fa fa-clock-o" aria-hidden="true"></i> HORA</th>
                     <th>TIPO</th>
+                    <th>RESUMO</th>
                 </tr>
             </thead>
             <tbody>
@@ -90,17 +91,18 @@
                     <td>
                         <i class="fa icon-status" ng-class="{'fa-phone call-in': interacao.tipoId==1,'fa-phone call-out': interacao.tipoId==2,'fa-envelope email': interacao.tipoId==3}" aria-hidden="true"></i> {{interacao.tipo}}
                     </td>
+                    <td>Cliente falou algo</td>
                 </tr>
             </tbody>
         </table>
     </panel>
     <panel title="ÚLTIMAS PESQUISAS" icon="fa-search" height="50" col="4" size="sm" panelclass="panel-success">
-        <div class="input-group input-group-sm">
+<!--         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
             <input type="text" class="form-control" placeholder="busca pesquisas" aria-describedby="sizing-addon1" ng-model="filtro3">
         </div>
-        <br/>
+        <br/> -->
         <table class="table table-hover">
             <!-- <caption>Monthly Kills</caption> -->
             <thead>
