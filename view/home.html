@@ -1,5 +1,11 @@
 <div class="row">
     <panel title="DADOS CRÉDITO" icon="fa-usd" height="50" col="4" size="sm" panelclass="panel-danger">
+            <panel-actions>
+            <button type="button" class="btn btn-default btn-xs"  ng-click="expad()"><i class="fa fa-expand" aria-hidden="true"></i></button>
+        </panel-actions>
+
+
+
         <div class="row">
             <div class="col-xs-6">
                 <dl class="dl-flex">
@@ -156,16 +162,45 @@
             </tbody>
         </table>
     </panel>
-    <panel title="FATURAMENTO POR TONELADA" icon="fa-truck" height="50" col="3" size="sm" panelclass="panel-warning">
-        <c3chart bindto-id="donut-plot1-chart">
+    <panel title="FATURAMENTO POR TONELADA" icon="fa-truck" height="50" col="4" size="sm" panelclass="panel-warning">
+        <table class="table table-hover">
+            <!-- <caption>Monthly Kills</caption> -->
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Média</th>
+                    <th>Variação</th>
+                    <th>M1</th>
+                    <th>M2</th>
+                    <th>M3</th>
+                    <th>M4</th>
+                    <th>M5</th>
+                    <th>M6</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="fatura in faturaTon | filter:filtro1">
+                    <td>{{fatura.produto}}</td>
+                    <td>{{(fatura.m1 + fatura.m2 + fatura.m3 + fatura.m4 + fatura.m5 + fatura.m6)/6 | number : 1}}</td>
+                    <td>{{(fatura.m6 - fatura.m1)}}</td>
+                    <td>{{fatura.m1}}</td>
+                    <td>{{fatura.m2}}</td>
+                    <td>{{fatura.m3}}</td>
+                    <td>{{fatura.m4}}</td>
+                    <td>{{fatura.m5}}</td>
+                    <td>{{fatura.m6}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <c3chart bindto-id="donut-plot1-chart">
             <chart-size chart-height="160" />
             <chart-column column-id="CIMENTO" column-values="70" column-type="donut" />
             <chart-column column-id="COLANTE" column-values="35" column-type="donut" />
             <chart-column column-id="AGREGADO" column-values="60" column-type="donut" />
             <chart-donut title="Donut" width="50" />
-        </c3chart>
+        </c3chart> -->
     </panel>
-    <panel title="FATURAMENTO POR QUANTIDADE" icon="fa-hashtag" height="50" col="5" panelclass="panel-warning" size="sm">
+    <panel title="FATURAMENTO POR QUANTIDADE" icon="fa-hashtag" height="50" col="4" panelclass="panel-warning" size="sm">
         <c3chart bindto-id="stacked-bar-plot1-chart" chart-data="dadosGraficos" chart-columns="dadosGraficosColunas" chart-x="datax">
             <chart-size chart-height="160" />
             <chart-axes values-x="x" />

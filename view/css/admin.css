@@ -368,3 +368,36 @@ p {
 .width-max-50{
     width: 50%;
 }
+
+.expanded{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    margin: 0;
+}
+
+
+.dl-flex-block dt {
+    font-size: 15px;
+    text-align: center;
+}
+
+.dl-flex-block  dd {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+    background: #eee;
+    font-weight: 600;
+    margin-top: 4px;
+
+    margin-bottom: 20px;
+}
+
+.inline-alert {
+    display: inline-block;
+}

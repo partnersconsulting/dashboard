@@ -191,6 +191,60 @@ angular.module("App.controllers", [])
         }];
 
 
+
+
+
+
+
+        $rootScope.faturaTon = [
+            {
+                produto: "Cimentos",
+                m1: 10,
+                m2: 15,
+                m3: 20,
+                m4: 18,
+                m5: 25,
+                m6: 30
+            },
+             {
+                produto: "Colantes",
+                m1: 8,
+                m2: 12,
+                m3: 22,
+                m4: 35,
+                m5: 44,
+                m6: 55
+            },
+             {
+                produto: "Básicas",
+                m1: 22,
+                m2: 30,
+                m3: 40,
+                m4: 50,
+                m5: 66,
+                m6: 70
+            },
+             {
+                produto: "Cales",
+                m1: 9,
+                m2: 22,
+                m3: 23,
+                m4: 25,
+                m5: 20,
+                m6: 31
+            },
+             {
+                produto: "Agregados",
+                m1: 15,
+                m2: 30,
+                m3: 45,
+                m4: 40,
+                m5: 50,
+                m6: 60
+            }
+
+        ]
+
         $rootScope.pedidos = [
         {
             id: 9000000270,

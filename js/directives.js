@@ -10,10 +10,16 @@ angular.module('App.directives', [])
             height: '@height',
             size: '@size',
             panelclass: '@panelclass',
-            icon: '@icon'
+            icon: '@icon',
+            expand: '&'
         }
-
         ddo.controller = function($rootScope, $scope, $attrs) {
+
+            $scope.expand = function(){
+                console.log("expand()");
+            }
+
+
             if (!$scope.height) {
                 $scope.height = 50;
             }

@@ -1,9 +1,6 @@
-<div class="panel panel-project" ng-class="panelclass">
+<div class="panel panel-project" ng-class="panelclass" ng-class="{ 'expanded': isOpen }">
 
-    <div class="panel-heading" ng-class="{ 'panel-mini':size==='sm' }">
-
-
-
+    <div class="panel-heading" ng-class="{ 'panel-mini':size==='sm' }" >
 
         <!-- <i ng-if="icon" class="fa {{icon}}" aria-hidden="true"></i> -->
         <span ng-if="icon"  class="fa-stack fa-lg">
@@ -15,6 +12,7 @@
 
          <div ng-transclude="actions" class="actions"></div> 
     </div>
+
     <!-- <div class="panel-body" style="height: calc({{height}}vh - 70px)" ng-transclude ng-class="{ 'panel-body-form':type==='form' }"> -->
     <div class="panel-body" style="height: 175px" ng-transclude ng-class="{ 'panel-body-form':type==='form' }">
     </div>
