@@ -87,10 +87,12 @@ angular.module("App.controllers", [])
             "id": "x"
         };
 
+        $scope.openPop = function() {
+            $rootScope.open('md', '', 'view/modal/pedido.html', '');
+        }
 
-
-
-        $rootScope.open('md', '', 'view/modal/pedido.html', '');
+        $scope.openPop();
+        
     })
     .controller("ModalInstanceCtrl", function($scope, $rootScope, $filter, $uibModal, $document, $location, $uibModalInstance)
     {
