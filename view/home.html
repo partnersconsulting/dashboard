@@ -129,7 +129,7 @@
     </panel>
 </div>
 <div class="row">
-    <panel title="ÚLTIMAS COTAÇÕES/ PEDIDOS" icon="fa-file-text-o" height="50" col="5" panelclass="panel-info" size="sm">
+    <panel title="ÚLTIMAS COTAÇÕES/ PEDIDOS" icon="fa-file-text-o" height="50" col="4" panelclass="panel-info" size="sm">
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
@@ -159,13 +159,13 @@
     <panel title="FATURAMENTO POR TONELADA" icon="fa-truck" height="50" col="3" size="sm" panelclass="panel-warning">
         <c3chart bindto-id="donut-plot1-chart">
             <chart-size chart-height="160" />
-            <chart-column column-id="Data 1" column-values="70" column-type="donut" />
-            <chart-column column-id="Data 2" column-values="35" column-type="donut" />
-            <chart-column column-id="Data 3" column-values="60" column-type="donut" />
+            <chart-column column-id="CIMENTO" column-values="70" column-type="donut" />
+            <chart-column column-id="COLANTE" column-values="35" column-type="donut" />
+            <chart-column column-id="AGREGADO" column-values="60" column-type="donut" />
             <chart-donut title="Donut" width="50" />
         </c3chart>
     </panel>
-    <panel title="FATURAMENTO POR QUANTIDADE" icon="fa-hashtag" height="50" col="4" panelclass="panel-warning" size="sm">
+    <panel title="FATURAMENTO POR QUANTIDADE" icon="fa-hashtag" height="50" col="5" panelclass="panel-warning" size="sm">
         <c3chart bindto-id="stacked-bar-plot1-chart" chart-data="dadosGraficos" chart-columns="dadosGraficosColunas" chart-x="datax">
             <chart-size chart-height="160" />
             <chart-axes values-x="x" />
@@ -173,7 +173,6 @@
                 <chart-axis-x axis-position="outer-center" axis-label="Dados Mercado" axis-type="category" />
             </chart-axis>
             <chart-bar ratio="0.8" />
-            <chart-group group-values="data 1,data 2" />
         </c3chart>
     </panel>
 </div>
