@@ -75,8 +75,13 @@ angular.module("App.controllers", [])
         
         $rootScope.open('md', '', 'view/modal/pedido.html', '');
     })
-.controller("ModalInstanceCtrl", function($scope, $rootScope, $filter, $uibModal, $document, $location)
+.controller("ModalInstanceCtrl", function($scope, $rootScope, $filter, $uibModal, $document, $location, $uibModalInstance)
 {
+
+        $scope.cancel = function () {
+            $uibModalInstance.dismiss('cancel');
+        };
+
 })
 .controller("MainController", function($scope, $rootScope, $filter, $uibModal, $document, $location)
 {
