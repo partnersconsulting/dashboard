@@ -64,7 +64,7 @@
             </div>
         </div> -->
     </panel>
-    <panel title="ÚLTIMAS INTERAÇÕES" icon="fa-exchange" height="50" col="4" size="sm">
+    <panel title="ÚLTIMAS INTERAÇÕES" icon="fa-exchange" height="50" col="5" size="sm">
 <!--         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
@@ -91,12 +91,12 @@
                     <td>
                         <i class="fa icon-status" ng-class="{'fa-phone call-in': interacao.tipoId==1,'fa-phone call-out': interacao.tipoId==2,'fa-envelope email': interacao.tipoId==3}" aria-hidden="true"></i> {{interacao.tipo}}
                     </td>
-                    <td>Cliente falou algo</td>
+                    <td>Cliente falou algo e em relação ao pedido</td>
                 </tr>
             </tbody>
         </table>
     </panel>
-    <panel title="ÚLTIMAS PESQUISAS" icon="fa-search" height="50" col="4" size="sm" panelclass="panel-success">
+    <panel title="ÚLTIMAS PESQUISAS" icon="fa-search" height="50" col="3" size="sm" panelclass="panel-success">
 <!--         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
@@ -108,9 +108,9 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Código cliente</th>
-                    <th>Data Pesquisa</th>
-                    <th><i class="fa fa-user icon-status" aria-hidden="true"></i> Realizada por</th>
+                    <th>Código</th>
+                    <th>Data</th>
+                    <th><i class="fa fa-user icon-status" aria-hidden="true"></i> Usuário</th>
                 </tr>
             </thead>
             <tbody>
@@ -126,7 +126,7 @@
     </panel>
 </div>
 <div class="row">
-    <panel title="ÚLTIMAS COTAÇÕES/ PEDIDOS" icon="fa-file-text-o" height="50" col="4" panelclass="panel-info" size="sm">
+    <panel title="ÚLTIMAS COTAÇÕES/ PEDIDOS" icon="fa-file-text-o" height="50" col="5" panelclass="panel-info" size="sm">
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
                                                                           aria-hidden="true"></i></span>
@@ -155,7 +155,7 @@
             </tbody>
         </table>
     </panel>
-    <panel title="FATURAMENTO POR TONELADA" icon="fa-truck" height="50" col="4" size="sm" panelclass="panel-warning">
+    <panel title="FATURAMENTO POR TONELADA" icon="fa-truck" height="50" col="3" size="sm" panelclass="panel-warning">
         <c3chart bindto-id="donut-plot1-chart">
              <chart-size chart-height="160" />
             <chart-column column-id="Data 1" column-values="70" column-type="donut" />
